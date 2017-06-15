@@ -3,16 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 吟求 - IT技术文章分享
 subtitle:
-description:
-author: John Doe
+description: 吟求是一个互联网技术分享的站点，汇聚了java、php、node.js、html5等最新技术实时文章
+keywords: IT文章聚合，IT文章分享，IT阅读分享
+author: eoeos
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://dodoing.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -63,7 +64,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-spfk
+theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
