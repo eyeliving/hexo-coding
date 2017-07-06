@@ -131,3 +131,38 @@ Person.call(p);也就是说构造p，也可以称之为初始化p。
 */
 
 ```
+
+做个测试
+```javascript
+var fun = function(){}  
+  
+fun.prototype = {      
+    name : 'peter',      
+    age : 25      
+}  
+  
+var a = new fun();  
+var b = new fun();  
+console.log(a.name, b.name);//peter peter  
+fun.prototype.name = 'jack';  
+console.log(a.name, b.name);//jack jack  
+fun.prototype = {};  
+fun.prototype.name = 'tom';  
+console.log(a.name, b.name);//jack jack  
+b.constructor.prototype.name = 'kitty';  
+console.log(a.name, b.name);//jack jack 
+```
+问：若想要输出tom该怎么改，为什么不能输出kitty?
+答案：
+(1)、`fun.prototype ={}`是重写原型，重写后跟重写前就已经实例化的对象没有关系的，所以Tom自然不生效。
+若要输出tom,添加以下代码`a.__proto__.name=tom`，无法通过fun来实现，因为原型链已断。
+			  
+(2)、 不能输出kitty是因为`b.contructor!=fun`，在刚开始的时候fun的原型就被重写了。
+可以改为
+```javascript
+fun.prototype={
+	name:''peter'',
+	constructor:fun,
+	age:25
+}
+```
