@@ -117,7 +117,7 @@ var p = new Person()
 p.__proto__ --> Person.protetype
 Person.protetype.__proto__ --> Function.protetype
 Function.protetype.__proto__ --> Object.protetype
-
+Object.protetype.__proto__ --> null
 /**
 很简单的一段代码，我们来看看这个new究竟做了什么？我们可以把new的过程拆分成以下三步：
 var p={}; 也就是说，初始化一个对象p。

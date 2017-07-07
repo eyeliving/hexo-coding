@@ -3,7 +3,7 @@ title: 带你玩转跨站脚本攻击cross site script
 description: 带你玩转跨站脚本攻击cross site script
 keywords: 跨站脚本攻击，cross site script，网站安全
 date: 2016-11-18 09:56
-tags: javascript
+tags: js
 ---
 > 跨站脚本攻击 cross site script
 

@@ -3,7 +3,7 @@ title: 学习ES6时for遇到循环的困惑
 description: 学习ES6时for遇到循环的困惑
 keywords: 学习ES6时for遇到循环的困惑，ES6，js，let，for循环
 date: 2016-11-16 12:56
-tags: javascript
+tags: js
 ---
 在读 《ECMAScript 6 入门》篇头就遇到了一个比较基础的问题，尴尬。。。
 

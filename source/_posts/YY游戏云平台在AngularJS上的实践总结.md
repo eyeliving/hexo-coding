@@ -3,7 +3,7 @@ title: YY游戏云平台在AngularJS上的实践总结
 description: YY游戏云平台在AngularJS上的实践总结
 keywords: YY游戏云平台在AngularJS上的实践总结
 date: 2016-12-06 18:19
-tags: javascript
+tags: js
 ---
 > 导语
 

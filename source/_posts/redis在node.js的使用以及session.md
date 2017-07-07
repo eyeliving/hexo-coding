@@ -3,7 +3,7 @@ title: redis在node.js的使用以及session
 description: redis在服务器端node.js下的使用，session、以及持久化存储
 keywords: redis，node.js，redis session，node.js session，ioredis的使用
 date: 2016-09-24 01:56
-tags: javascript node.js redis
+tags: js node.js redis
 ---
 <p>生产环境下，服务器宕机、故障、重启等等难免避免不了的。</p><p>而在这些未知的情况下，一些临时重要的数据很可能会丢失。</p><p>比如，这个情况，当某人，在客户端执行其认为很重要的操作时，突然出现bug，让其重新登陆</p><p>某人泪奔：尼玛！裤子都脱了，你让我去登录。。。</p><p>当然，这只是一个小小的特例。</p><p><br/></p><blockquote><p><span style="font-size: 16px; font-style: italic; font-weight: bold; line-height: 18px;"><span style="font-size: 16px; font-style: italic; font-weight: bold; color: rgb(51, 153, 204); line-height: 18px;">session</span></span></p></blockquote><p>现在我们利用redis的特性，持久化存储，在服务器端做session处理，</p><p>本人现用的是node.js V6，express4</p><pre class="brush:js;toolbar:false">var&nbsp;session&nbsp;=&nbsp;require(&#39;express-session&#39;);
 var&nbsp;RedisStore&nbsp;=&nbsp;require(&#39;connect-redis&#39;)(session);
