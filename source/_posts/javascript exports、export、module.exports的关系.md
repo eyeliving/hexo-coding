@@ -5,7 +5,7 @@ keywords: javascrip、exports、export、module.exports
 date: 2017-09-11 18:00
 tags: javascript
 ---
-> **常见的用法**
+> 常见的用法
 
 export：
 
@@ -48,7 +48,7 @@ exports 和 module.exports的关系是:
 
 * 当你搞不明白`export`和`module.export`的关系的时候，就一直使用`module.export`好了
 
-> **怎么调用这些方法**
+> 怎么调用这些方法
 
 ```javascript
 //定义test.js
@@ -102,3 +102,31 @@ module.exports = {
 //调用test.js中的pp方法
 import {pp} from './test.js'
 ```
+
+> require/exports与import/export
+
+require/exports是CommonJS(在Node中实现), import/export是es6的模块
+
+node目前为止还为支持import
+
+
+规范不一样，require是CommonJs,AMD,CMD规范中定义的模块请求方式，import是es6规范定义的模块请求方式，从规范与实现定义来说 require是运行时加载，import是编译时加载、静态加载，从底层的运行来讲，require是在程序运行的时候去解析而import是在编译的时候去做解析请求包，require是请求整个包对象而import是只请求模块中需要的请求的部分。现在import应该还只能算是ES6的语法规范，大多数浏览器还未支持，babel打包出来最终还是require。
+
+注：import命令是编译阶段执行的，在代码运行之前，同一个import只会执行一次
+```javascript
+foo();
+
+import { foo } from 'my_module';
+```
+上面的代码不会报错，因为import的执行早于foo的调用。
+
+这种行为的本质是，import命令是编译阶段执行的，在代码运行之前。
+
+```javascript
+import { foo } from 'my_module';
+import { bar } from 'my_module';
+
+// 等同于
+import { foo, bar } from 'my_module';
+```
+
