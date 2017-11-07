@@ -55,7 +55,7 @@ var fn = (function () {
         }
 })();
 fn.bbb();
- fn.ccc();
+fn.ccc();
 ```
 
 **闭包的场景？用法？**
